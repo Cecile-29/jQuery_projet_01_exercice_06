@@ -40,10 +40,10 @@
     //pour empêcher tout code jQuery de s'exécuter avant que le document ne soit entièrement chargé et prêt.
     $(document).ready(function() {
       // $ (dollar) remplace jQuery() qui nous permet de transformer l'élément sélectionné en objet jQuery
-      // ici est utilisé la méthode .hide qui s'applique aux éléments de la classe ".a_cacher"
+      // ici est utilisée la méthode .hide qui s'applique aux éléments de la classe ".a_cacher"
       $(".a_cacher").hide();
       // pour pouvoir la réafficher on applique la méthode .show aux éléments de la classe ".a_cacher".
-      // classe qui est activée après l'événement click sur le bouton à aux éléments de la classe ".a_cacher".
+      // classe qui est activée après l'événement click sur le bouton aux éléments de la classe ".a_cacher".
       $("#display").click(function() {
         $(".a_cacher").show();
       });
