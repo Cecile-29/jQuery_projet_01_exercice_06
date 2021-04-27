@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+
+<head>
+  <title>jQuery_projet_01_exercice_06</title>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container row justify-content-center">
+    <h1 class="col-12 p-4 m-2 text-center">Exercice_06 : Cacher tous les éléments de la classe "a_cacher".</h1>
+    <button class="btn-light btn-secondary rounded m-5" id="display" name="button" type="button">Afficher les éléments de la classe "a_cacher" !</button>
+    <div class="col-12 text-center" id="texte">
+      <ul>
+        <li>Html</li>
+        <li>CSS</li>
+        <li class="a_cacher">Javascript</li>
+        <li>PHP</li>
+        <li class="a_cacher">...</li>
+      </ul>
+      <ol>
+        <li class="a_cacher">JQuery</li>
+        <li>Angular JS</li>
+        <li class="a_cacher">Node JS</li>
+        <li>BootStrap</li>
+        <li>Symfony</li>
+        <li class="a_cacher">Laravel</li>
+      </ol>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.js">
+  </script>
+  <script>
+    //La syntaxe de jQuery est constituée d’un sélecteur d’élément HTML et d’une action sur le ou les éléments.
+    // le $ crée un objet jQuery auquel on appliquera une méthode.
+    //Syntaxe de base : $(selector).action()
+    // ici les méthodes de jQuery, seront placées dans une fonction $document.ready(function(){});
+    //pour empêcher tout code jQuery de s'exécuter avant que le document ne soit entièrement chargé et prêt.
+    $(document).ready(function() {
+      // $ (dollar) remplace jQuery() qui nous permet de transformer l'élément sélectionné en objet jQuery
+      // ici est utilisé la méthode .hide qui s'applique aux éléments de la classe ".a_cacher"
+      $(".a_cacher").hide();
+      // pour pouvoir la réafficher on applique la méthode .show aux éléments de la classe ".a_cacher".
+      // classe qui est activée après l'événement click sur le bouton à aux éléments de la classe ".a_cacher".
+      $("#display").click(function() {
+        $(".a_cacher").show();
+      });
+    });
+  </script>
+</body>
+
+</html>
